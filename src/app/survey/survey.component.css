@@ -1,0 +1,96 @@
+  /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+          background-color: #05c46b;
+          font-family: Verdana;
+          text-align: center;
+      }
+
+      /* Styling the Form (Color, Padding, Shadow) */
+      form {
+          background-color: #fff;
+          max-width: 700px;
+          margin: 50px auto;
+          padding: 30px 20px;
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Styling form-css Class */
+      .form-css {
+          text-align: left;
+          margin-bottom: 25px;
+      }
+
+      /* Styling form-css Label */
+      .form-css label {
+          display: block;
+          margin-bottom: 10px;
+      }
+
+      /* Styling form-css input,
+      select, textarea */
+      .form-css input,
+      .form-css select,
+      .form-css textarea {
+          border: 1px solid #777;
+          border-radius: 2px;
+          font-family: inherit;
+          padding: 10px;
+          display: block;
+          width: 95%;
+      }
+
+      /* Styling form-css Radio
+      button and Checkbox */
+      .form-css input[type="radio"],
+      .form-css input[type="checkbox"] {
+          display: inline-block;
+          width: auto;
+      }
+
+
+.fixed-footer{
+     position: fixed;
+
+width: 100%;
+height: 90px;
+
+background: #ffcc33;
+
+color: #fff;
+bottom:0;
+ margin-right: 0;
+ margin: 0;
+}
+
+.fixed-header{
+ position: fixed;
+ box-shadow: 12px 12px 2px 1px rgba(0, 102, 51, .2);
+
+ width: 100%;
+ top: 0;
+
+ margin: 0;
+ background: #063;
+ height:100px;
+ left: 0px;
+
+ margin-left: 0;
+
+}
+.required-asterisk{
+color: red;
+font-weight: bolder;
+margin-left: 3px;
+font-size: 1em;
+}
+
+.shadow{
+  font-size: 3em;
+  box-shadow: 12px 12px 2px 1px rgba(0, 102, 51, .2);
+  width:50%;background: #FFCC33;
+  color:#063;
+  padding: 5px; border: 2px solid #006633;border-width: 5px;
+
+  }
+

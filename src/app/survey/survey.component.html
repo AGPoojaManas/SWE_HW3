@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" >
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script type="text/javascript"></script>
+      <title>
+          CS Department Survey Form
+      </title>
+  </head>
+  <body style="background-color:#F0FFF0; background-image: url('https://645hw1rajganesh.s3.amazonaws.com/home.jpg');" class="w3-image">
+    <header  >
+      <b><p class="shadow" style="width: 100%;">Student Survey Form</p></b>
+    </header>
+    <br>
+
+    <div class="form-css">
+        <form #frm="ngForm" (ngSubmit)="submit" ngNativeValidate>
+
+            <div >
+                <div class="col-25">
+                    <label for="fname">First Name:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="First name" name="First name" [(ngModel)]="model.firstName" placeholder="Enter your First name..."
+                        autofocus="autofocus" required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="lname">Last Name:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="Last name" name="Last name" [(ngModel)]="model.lastName" placeholder="Enter your Last name..."
+                        autofocus="autofocus" required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="address">Street Adress:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="address" name="address" [(ngModel)]="model.address" placeholder="4400 University Drive"required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="city">City:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="city" name="city" [(ngModel)]="model.city" placeholder="Fairfax" required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="state">State:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="state" name="state" [(ngModel)]="model.state" placeholder="VA" required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="zip">Zip:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="zip" name="zip" [(ngModel)]="model.zip" placeholder="22030" required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="tnumber">Telephone Number:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="mobile" name="mobile" [(ngModel)]="model.mobile" placeholder="(xxx) xxx-xxxx"
+                        required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="email">Email:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="text" id="email" name="email" [(ngModel)]="model.email" placeholder="cs@gmu.edu" required>
+                </div>
+            </div>
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="surveydate">Date of survey:</label>
+                    <span class="required-asterisk">*</span>
+                </div>
+                <div class="col-50">
+                    <input type="date" id="dateOfSurvey" name="dateOfSurvey" [(ngModel)]="model.dateOfSurvey" placeholder="mm/dd/yyyy" required>
+                </div>
+            </div>
+
+            <div class="form-css">
+                <label for="fname">What did you like the most about the campus?</label>
+                <div *ngFor="let item of checkboxesDataList">
+                    <input type="checkbox" name="likes" id="likes" [(ngModel)]="item.isChecked">{{item.label}}
+                </div>
+            </div>
+
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="fname">How did you become interested in the university?</label>
+                </div>
+                <div class="col-50">
+                    <input type="radio" id="Friends" name="sources" value="Friends" [(ngModel)]="model.sources">
+                    <label for="Friends">Friends</label>
+                    <input type="radio" id="Television" name="sources" value="Television" [(ngModel)]="model.sources">
+                    <label for="Telivision">Television</label>
+                    <input type="radio" id="Internet" name="sources" value="Internet" [(ngModel)]="model.sources">
+                    <label for="Internet">Internet</label>
+                    <input type="radio" id="Others" name="sources" value="Others" [(ngModel)]="model.sources">
+                    <label for="Others">Others</label>
+                </div>
+            </div>
+
+
+            <div class="form-css">
+                <div class="col-25">
+                    <label for="likelihood">What is the likelihood of you recommending this school to prospective
+                        students?</label>
+                </div>
+                <div class="col-50">
+                    <select id="likelihood" name="recommendation" [(ngModel)]="model.recommendation">
+                        <option value="">--Select--</option>
+                        <option value="Very Likely">Very Likely</option>
+                        <option value="Likely">Likely</option>
+                        <option value="Unlikely">Unlikely</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <h4><span class="required-asterisk">*</span> Indicates required fields.</h4>
+
+
+            <div>
+
+
+                <input type="submit" value="Submit" (click)="submit()" class="btn btn-success">
+                <br>
+                <input type="reset" value="Cancel" class="btn btn-danger" >
+            </div>
+
+            <!-- <h4>
+				<button type="submit" (click)="onClickSubmit()">Submit</button>
+			    <button type="button" (click)="cancel()">Cancel</button>
+			</h4> -->
+        </form>
+    </div>
+
+
+<router-outlet></router-outlet>
+</body>
+</html>
